@@ -18,7 +18,7 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 1. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 
 ```env
-VITE_API_URL=http://localhost:3000
+VITE_API_URL=https://wefit-movies.vercel.app/api/movies
 VITE_REQUEST_DELAY=2000
 # VITE_FORCE_ERROR=1
 ```
