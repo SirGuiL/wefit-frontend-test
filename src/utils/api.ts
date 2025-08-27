@@ -13,6 +13,7 @@ export async function apiRequest<T>(
   const data = await response.json();
 
   const forceError = import.meta.env.VITE_FORCE_ERROR === "true";
+
   if (forceError) {
     throw new Error("Error on request");
   }
