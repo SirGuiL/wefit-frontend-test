@@ -1,7 +1,7 @@
 import { ReactNode, createContext, useCallback, useState } from "react";
 
-import { productCartDTO, productDTO } from "../dtos/productDTO";
-import { api } from "../services/api";
+import { movieResponse, productCartDTO, productDTO } from "../dtos/productDTO";
+import { apiRequest } from "../utils/api";
 
 export type ProductsContextProps = {
   products: productDTO[];
@@ -31,7 +31,7 @@ export function HistoryContextProvider({
 
   const getProducts = useCallback(async () => {
     try {
-      const response = await api.get("/movies");
+      const response = await apiRequest<movieResponse>("/movies");
 
       const forceError = import.meta.env.VITE_FORCE_ERROR || false;
 
@@ -39,7 +39,7 @@ export function HistoryContextProvider({
         throw new Error("Error on request");
       }
 
-      setProducts(response.data.products);
+      setProducts(response.products);
     } catch (e) {
       console.error(e);
     } finally {

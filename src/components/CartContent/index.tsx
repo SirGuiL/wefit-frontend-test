@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
-import { Button } from "../Button";
-import { NothingHere } from "../NothingHere";
-
 import NothingHereImage from "../../assets/nothing-here.svg";
 import FinishImage from "../../assets/finish.svg";
-import { productCartDTO } from "../../dtos/productDTO";
+
+import { CartContentProps } from "./types";
+import { ButtonType } from "../Button/types";
 
 import {
   Separator,
@@ -18,12 +17,8 @@ import {
   Footer,
 } from "./styles";
 import { ProductCart } from "../ProductCart";
-
-interface CartContentProps {
-  isFinished: boolean;
-  cart: productCartDTO[];
-  handleFinishOrder: () => void;
-}
+import { Button } from "../Button";
+import { NothingHere } from "../NothingHere";
 
 export const CartContent = ({
   isFinished,
@@ -32,12 +27,18 @@ export const CartContent = ({
 }: CartContentProps) => {
   const navigate = useNavigate();
 
+  const backButton = (
+    <Button
+      text="VOLTAR"
+      type={ButtonType.PRIMARY}
+      onClick={() => navigate("/")}
+    />
+  );
+
   if (isFinished) {
     return (
       <NothingHere
-        button={
-          <Button text="VOLTAR" type="primary" onClick={() => navigate("/")} />
-        }
+        button={backButton}
         imagePath={FinishImage}
         title="Compra realizada com sucesso!"
         compact
@@ -48,9 +49,7 @@ export const CartContent = ({
   if (cart.length === 0) {
     return (
       <NothingHere
-        button={
-          <Button text="VOLTAR" type="primary" onClick={() => navigate("/")} />
-        }
+        button={backButton}
         imagePath={NothingHereImage}
         title="Parece que não há nada por aqui :("
       />
@@ -108,7 +107,7 @@ export const CartContent = ({
         <ButtonContainer>
           <Button
             text="FINALIZAR PEDIDO"
-            type="primary"
+            type={ButtonType.PRIMARY}
             onClick={() => handleFinishOrder()}
           />
         </ButtonContainer>

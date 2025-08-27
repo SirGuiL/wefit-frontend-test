@@ -54,7 +54,7 @@ export const Title = styled.h1`
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
-  line-height: 136.21428571429%;
+  line-height: 100%;
   text-align: left;
   color: #2f2e41;
 
@@ -70,7 +70,7 @@ export const Price = styled.span`
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 136.1875%;
+  line-height: 100%;
   text-align: left;
   color: #2f2e41;
 `;
@@ -116,7 +116,8 @@ export const Subtotal = styled.span`
   font-family: "Open Sans", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  line-height: 136.16666666667%;
+  line-height: 100%;
+  color: #999999;
 
   @media (min-width: 800px) {
     display: none;

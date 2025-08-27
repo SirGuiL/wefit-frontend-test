@@ -20,7 +20,7 @@ export const TotalContainer = styled.div`
     font-family: "Open Sans", sans-serif;
     font-size: 0.875rem;
     font-weight: 700;
-    line-height: 136.21428571429%;
+    line-height: 100%;
     color: #999999;
   }
 
@@ -35,9 +35,11 @@ export const TotalPrice = styled.h1`
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 136.16666666667%;
+  line-height: 100%;
   text-align: center;
   color: #2f2e41;
+
+  width: 130px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -65,6 +67,16 @@ export const CartHeaderItem = styled.div`
 
   &:not(:first-child) {
     flex: 1;
+  }
+
+  span {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #999999;
   }
 `;
 

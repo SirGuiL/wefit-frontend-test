@@ -11,11 +11,12 @@ export const Container = styled.button<buttonProps>`
   gap: 12px;
 
   width: 100%;
+  height: 40px;
 
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   font-size: 0.75rem;
-  line-height: 136.16666666667%;
+  line-height: 100%;
   text-align: center;
 
   background: ${({ type }) => (type == "primary" ? "#009EDD" : "#039B00")};
@@ -44,4 +45,6 @@ export const IconContainer = styled.div`
 export const ButtonText = styled.span`
   font-weight: 700;
   white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 100%;
 `;

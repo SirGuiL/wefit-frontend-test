@@ -8,3 +8,7 @@ export type productDTO = {
 export type productCartDTO = productDTO & {
   quantity: number;
 };
+
+export type movieResponse = {
+  products: productDTO[];
+};

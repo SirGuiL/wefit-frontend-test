@@ -1,5 +1,3 @@
-import { productDTO } from "../../dtos/productDTO";
-
 import { Button } from "../Button";
 import { LoadingSpinner } from "../LoadingSpinner";
 import { NothingHere } from "../NothingHere";
@@ -9,10 +7,8 @@ import { CardsContainer, NoContentContainer, SpinnerContainer } from "./styles";
 
 import NothingHereImage from "../../assets/nothing-here.svg";
 
-interface HomeContentProps {
-  isLoading: boolean;
-  products: productDTO[];
-}
+import { HomeContentProps } from "./types";
+import { ButtonType } from "../Button/types";
 
 export const HomeContent = ({ isLoading, products }: HomeContentProps) => {
   if (isLoading) {
@@ -30,7 +26,7 @@ export const HomeContent = ({ isLoading, products }: HomeContentProps) => {
           button={
             <Button
               text="Recarregar página"
-              type="primary"
+              type={ButtonType.PRIMARY}
               onClick={() => location.reload()}
             />
           }

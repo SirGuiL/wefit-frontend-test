@@ -24,7 +24,7 @@ export const Title = styled.div`
   font-family: "Open Sans", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 136.2%;
+  line-height: 100%;
   text-align: center;
   color: #2f2e41;
 `;
@@ -43,5 +43,12 @@ export const ImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    img {
+      width: 178.62840270996094px;
+      height: 265.36041259765625px;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 `;

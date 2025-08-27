@@ -1,18 +1,14 @@
 import addIcon from "../../assets/icons/add.svg";
 import decrementIcon from "../../assets/icons/decrement.svg";
-import { Button, Container, QuantityContainer } from "./styles";
 
-type Props = {
-  quantity: number;
-  onIncrement: () => void;
-  onDecrement: () => void;
-};
+import { Button, Container, QuantityContainer } from "./styles";
+import { CartItemQuantityProps } from "./types";
 
 export function CartItemQuantity({
   quantity,
   onIncrement,
   onDecrement,
-}: Props) {
+}: CartItemQuantityProps) {
   return (
     <Container>
       <Button onClick={onDecrement}>

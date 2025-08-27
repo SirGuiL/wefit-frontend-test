@@ -11,7 +11,7 @@ export const Title = styled.h1`
   font-family: "Open Sans", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 136.2%;
+  line-height: 100%;
   text-align: left;
   color: #ffffff;
 
@@ -32,16 +32,19 @@ export const CartButton = styled.button`
   span {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
+    line-height: 100%;
 
     &:first-child {
       font-size: 0.875rem;
-      line-height: 136.21428571429%;
       color: #ffffff;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
 
     &:last-child {
       font-size: 0.75rem;
-      line-height: 136.16666666667%;
       color: #999999;
     }
   }
@@ -56,10 +59,4 @@ export const TextsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
-  @media (max-width: 800px) {
-    span:first-child {
-      display: none;
-    }
-  }
 `;

@@ -1,14 +1,7 @@
 import { Container, IconContainer, ButtonText } from "./styles";
+import { ButtonProps } from "./types";
 
-type Props = {
-  type: "primary" | "success";
-  text: string;
-  icon?: string;
-  cartQty?: number;
-  onClick: () => void;
-};
-
-export function Button({ text, type, icon, onClick, cartQty }: Props) {
+export function Button({ text, type, icon, onClick, cartQty }: ButtonProps) {
   return (
     <Container type={type} onClick={onClick}>
       {icon && (

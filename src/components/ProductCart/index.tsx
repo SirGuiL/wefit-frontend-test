@@ -1,8 +1,7 @@
-import { productCartDTO } from "../../dtos/productDTO";
 import { UseProducts } from "../../hooks/UseProducts";
-import { CartItemQuantity } from "../CartItemQuantity";
 import thrashIcon from "../../assets/icons/trash.svg";
 
+import { CartItemQuantity } from "../CartItemQuantity";
 import {
   Container,
   Image,
@@ -18,13 +17,15 @@ import {
   RemoveButtonLargeScreen,
 } from "./styles";
 
+import { ProductCartProps } from "./types";
+
 export function ProductCart({
   image,
   title,
   price,
   quantity,
   id,
-}: productCartDTO) {
+}: ProductCartProps) {
   const {
     handleRemoveProductInCart,
     handleAddProductInCart,
@@ -59,7 +60,7 @@ export function ProductCart({
             />
 
             <SubtotalContainer>
-              <Subtotal>Subtotal</Subtotal>
+              <Subtotal>SUBTOTAL</Subtotal>
 
               <Price>
                 {(price * quantity).toLocaleString("pt-BR", {

@@ -1,15 +1,7 @@
 import { Container, Title, ButtonContainer, ImageContainer } from "./styles";
+import { NothingHereProps } from "./types";
 
-import { ReactNode } from "react";
-
-type Props = {
-  title: string;
-  button: ReactNode;
-  imagePath: string;
-  compact?: boolean;
-};
-
-export function NothingHere({ title, button, imagePath }: Props) {
+export function NothingHere({ title, button, imagePath }: NothingHereProps) {
   return (
     <Container>
       <Title>{title}</Title>

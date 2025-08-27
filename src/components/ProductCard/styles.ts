@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   align-self: flex-start;
-  gap: 16px;
+  gap: 8px;
 
   background: #ffffff;
   border-radius: 4px;
@@ -23,22 +23,39 @@ export const Content = styled.div`
 
 export const Image = styled.img`
   width: 147px;
+  height: 188px;
 `;
 
-export const Title = styled.h1`
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: 136.16666666667%;
-  text-align: center;
-  color: #333333;
+export const Title = styled.div`
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    color: #333333;
+  }
 `;
 
-export const Price = styled.span`
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 136.1875%;
-  text-align: center;
-  color: #2f2e41;
+export const Price = styled.div`
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    color: #2f2e41;
+  }
 `;
