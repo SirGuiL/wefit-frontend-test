@@ -17,7 +17,9 @@ export function Header() {
       <CartButton onClick={handleGoToCart}>
         <TextsContainer>
           <span>Meu carrinho</span>
-          <span>{cart.length} itens</span>
+          <span>
+            {cart.reduce((total, product) => total + product.quantity, 0)} itens
+          </span>
         </TextsContainer>
 
         <img src={cartIcon} alt="Meu carrinho" />

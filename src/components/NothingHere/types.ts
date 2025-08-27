@@ -4,5 +4,9 @@ export interface NothingHereProps {
   title: string;
   button: ReactNode;
   imagePath: string;
-  compact?: boolean;
+  isFinishScreen?: boolean;
+}
+
+export interface ImageContainerProps {
+  isFinishScreen?: boolean;
 }

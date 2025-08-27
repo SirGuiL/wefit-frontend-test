@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ImageContainerProps } from "./types";
 
 export const Container = styled.div`
   display: flex;
@@ -37,7 +38,7 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div<ImageContainerProps>`
   @media (max-width: 800px) {
     overflow: hidden;
     display: flex;
@@ -45,7 +46,8 @@ export const ImageContainer = styled.div`
     justify-content: center;
 
     img {
-      width: 178.62840270996094px;
+      width: ${({ isFinishScreen }) =>
+        isFinishScreen ? "auto" : "178.62840270996094px"};
       height: 265.36041259765625px;
       object-fit: cover;
       object-position: center;

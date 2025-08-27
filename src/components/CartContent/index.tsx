@@ -41,7 +41,7 @@ export const CartContent = ({
         button={backButton}
         imagePath={FinishImage}
         title="Compra realizada com sucesso!"
-        compact
+        isFinishScreen
       />
     );
   }
